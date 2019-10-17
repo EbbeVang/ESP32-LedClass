@@ -7,17 +7,25 @@ using namespace std;
    
     LedLight::LedLight()
     {
-        pinNumber = 14;
+        pinNumber = 2;
+        pinMode(pinNumber, OUTPUT);
+
     } 
 
     void LedLight::on()
     {
-
+        digitalWrite(pinNumber, HIGH);   
     }
 
     void LedLight::off()
     {
+        digitalWrite(pinNumber, LOW);   
+    
+    }
 
+    void LedLight::pulse()
+    {
+        // make a cool pulse function
     }
 
    

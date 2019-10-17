@@ -8,6 +8,7 @@ class LedLight
         LedLight(); 
         void on();
         void off();
+        void pulse();
     private:
         
 };
