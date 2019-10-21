@@ -4,11 +4,11 @@ using namespace std;
 class LedLight
 {
     public:
-        int pinNumber;
-        LedLight(); 
+        LedLight(int pin, int channel); 
         void on();
         void off();
-        void pulse();
+        void setPulse(bool state);
+        void loop();
+        void setPulseDelay();
     private:
-        
 };

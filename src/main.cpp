@@ -1,20 +1,16 @@
 #include <Arduino.h>
 #include <LedLight.h>
 
-
-LedLight firstObject;
-
+LedLight statusLED(2, 0);
 
 void setup() {
   // put your setup code here, to run once:
   Serial.begin(9600);
-  
+  statusLED.setPulse(true);
 }
 
 void loop() 
 {
-  firstObject.on();
-  delay(1000);
-  firstObject.off();
-  delay(1000);
+  // used for pulse
+  statusLED.loop();
 }
