@@ -5,9 +5,9 @@ using namespace std;
 
     int pinNumber = 2;
    
-    LedLight::LedLight()
+    LedLight::LedLight(int pin)
     {
-        pinNumber = 14;
+        pinNumber = pin;
     } 
 
     void LedLight::on()

@@ -5,7 +5,7 @@ class LedLight
 {
     public:
         int pinNumber;
-        LedLight(); 
+        LedLight(int pin); 
         void on();
         void off();
     private:
