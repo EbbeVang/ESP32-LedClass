@@ -10,8 +10,7 @@ https://docs.platformio.org/page/plus/unit-testing.html
 #include <LedLight.h>
 
 int pin = 2;
-int channel = 0;
-LedLight ledLight(pin, channel);
+LedLight ledLight(pin);
 
 void setUp(void) {
     //set stuff up here
@@ -24,12 +23,14 @@ void setUp(void) {
 void test_ledlight_off(void)
 {
     ledLight.off();
+    delay(500);
     TEST_ASSERT_EQUAL(digitalRead(pin), LOW);
 }
 
 void test_ledlight_on(void)
 {
     ledLight.on();
+    delay(500);
     TEST_ASSERT_EQUAL(digitalRead(pin), HIGH);
 }
 
@@ -42,7 +43,7 @@ void setup() {
     
     RUN_TEST(test_ledlight_on);
 
-    delay(500);
+
 
     RUN_TEST(test_ledlight_off);
 
@@ -52,6 +53,5 @@ void setup() {
 
 void loop()
 {
-    // in order to execute pulse logic in ledLight
-    ledLight.loop();
+    
 }

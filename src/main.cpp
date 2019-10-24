@@ -2,7 +2,7 @@
 #include <LedLight.h>
 
 
-LedLight firstObject;
+LedLight led(2);
 
 
 void setup() {
@@ -13,8 +13,11 @@ void setup() {
 
 void loop() 
 {
-  firstObject.on();
+  Serial.println("on");
+  led.on();
   delay(1000);
-  firstObject.off();
+  
+  Serial.println("off");
+  led.off();
   delay(1000);
 }
